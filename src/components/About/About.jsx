@@ -51,8 +51,8 @@ export default function About({ theme = 'dark' }) {
   const isDark = theme === 'dark';
   
   const streakUrl = isDark
-    ? `https://github-readme-streak-stats.herokuapp.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=transparent&ring=6366F1&fire=22D3EE&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=94a3b8&sideLabels=94a3b8&dates=94a3b8&background=00000000`
-    : `https://github-readme-streak-stats.herokuapp.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=transparent&ring=4338CA&fire=0E7490&currStreakNum=020617&sideNums=020617&currStreakLabel=334155&sideLabels=334155&dates=475569&background=00000000`;
+    ? `https://streak-stats.demolab.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=transparent&ring=6366F1&fire=22D3EE&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=94a3b8&sideLabels=94a3b8&dates=94a3b8&background=00000000`
+    : `https://streak-stats.demolab.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=transparent&ring=4338CA&fire=0E7490&currStreakNum=020617&sideNums=020617&currStreakLabel=334155&sideLabels=334155&dates=475569&background=00000000`;
 
   const topLangsUrl = isDark
     ? `https://github-readme-stats.vercel.app/api/top-langs?username=${GITHUB_USER}&layout=compact&theme=transparent&hide_border=true&title_color=6366F1&text_color=F8FAFC&icon_color=22D3EE&bg_color=00000000&langs_count=6`

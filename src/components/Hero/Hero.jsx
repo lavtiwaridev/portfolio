@@ -287,7 +287,7 @@ export default function Hero({ onSectionChange }) {
                 <a href="#projects" className="btn btn--primary" onClick={e => { e.preventDefault(); handleScroll('projects'); }}>
                   <FiArrowDown /> View projects
                 </a>
-                <a href="/resume.pdf" className="btn btn--outline" download>
+                <a href="/Lav_Resume.pdf" className="btn btn--outline" download>
                   <FiDownload /> Download résumé
                 </a>
               </div>

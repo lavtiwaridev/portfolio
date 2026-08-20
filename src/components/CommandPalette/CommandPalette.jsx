@@ -17,7 +17,7 @@ const COMMANDS = [
   { id: 'testimonials',  label: 'Go to Testimonials',   icon: FiMessageSquare,group: 'navigate', section: 'testimonials' },
   { id: 'contact',       label: 'Go to Contact',        icon: FiMail,         group: 'navigate', section: 'contact' },
   // Actions
-  { id: 'resume',        label: 'Download Résumé',      icon: FiDownload,     group: 'action',   action: () => { const a = document.createElement('a'); a.href = '/resume.pdf'; a.download = 'LavKumar_Resume.pdf'; a.click(); } },
+  { id: 'resume',        label: 'Download Résumé',      icon: FiDownload,     group: 'action',   action: () => { const a = document.createElement('a'); a.href = '/Lav_Resume.pdf'; a.download = 'Lav_Resume.pdf'; a.click(); } },
   { id: 'github',        label: 'Open GitHub Profile',  icon: FiGithub,       group: 'action',   action: () => window.open('https://github.com/lavtiwaridev', '_blank') },
   { id: 'linkedin',      label: 'Open LinkedIn',        icon: FiLinkedin,     group: 'action',   action: () => window.open('https://www.linkedin.com/in/lavtiwaridev/', '_blank') },
   { id: 'email',         label: 'Send Email',           icon: FiMail,         group: 'action',   action: () => window.location.href = 'mailto:lavtiwari.dev@gmail.com' },

@@ -50,18 +50,18 @@ export default function ResumeModal({ isOpen, onClose }) {
           <span className={`${styles.dot} ${styles.red}`} />
           <span className={`${styles.dot} ${styles.yellow}`} />
           <span className={`${styles.dot} ${styles.green}`} />
-          <span className={styles.resume_modal__title}>~/documents/resume.pdf</span>
+          <span className={styles.resume_modal__title}>~/documents/Lav_Resume.pdf</span>
           <div className={styles.resume_modal__actions}>
             <a
-              href="/resume.pdf"
-              download="LavKumar_Resume.pdf"
+              href="/Lav_Resume.pdf"
+              download="Lav_Resume.pdf"
               className={styles.resume_modal__action_btn}
               title="Download PDF"
             >
               <FiDownload /> <span>Download</span>
             </a>
             <a
-              href="/resume.pdf"
+              href="/Lav_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.resume_modal__action_btn}
@@ -84,7 +84,7 @@ export default function ResumeModal({ isOpen, onClose }) {
         {/* PDF iframe */}
         <div className={styles.resume_modal__body}>
           <iframe
-            src="/resume.pdf#toolbar=0&navpanes=0"
+            src="/Lav_Resume.pdf#toolbar=0&navpanes=0"
             title="Lav Kumar Resume"
             className={styles.resume_modal__iframe}
           />
