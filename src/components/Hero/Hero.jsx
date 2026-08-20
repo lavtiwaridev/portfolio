@@ -11,9 +11,6 @@ import styles from './Hero.module.scss';
 // ── 3D Tilt Hook ──────────────────────────────────────────────────────────────
 function useTilt(strength = 8) {
   const ref = useRef(null);
-  const frameRef = useRef(null);
-  const currentTilt = useRef({ rx: 0, ry: 0 });
-  const targetTilt = useRef({ rx: 0, ry: 0 });
 
   const handleMouseMove = useCallback((e) => {
     const el = ref.current;
@@ -23,25 +20,15 @@ function useTilt(strength = 8) {
     const cy = rect.top + rect.height / 2;
     const dx = (e.clientX - cx) / (rect.width / 2);
     const dy = (e.clientY - cy) / (rect.height / 2);
-    targetTilt.current = { rx: -dy * strength, ry: dx * strength };
+    const rx = -dy * strength;
+    const ry = dx * strength;
+    el.style.transform = `perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg)`;
   }, [strength]);
 
   const handleMouseLeave = useCallback(() => {
-    targetTilt.current = { rx: 0, ry: 0 };
-  }, []);
-
-  useEffect(() => {
-    const lerp = (a, b, t) => a + (b - a) * t;
-    const animate = () => {
-      currentTilt.current.rx = lerp(currentTilt.current.rx, targetTilt.current.rx, 0.1);
-      currentTilt.current.ry = lerp(currentTilt.current.ry, targetTilt.current.ry, 0.1);
-      if (ref.current) {
-        ref.current.style.transform = `perspective(1200px) rotateX(${currentTilt.current.rx}deg) rotateY(${currentTilt.current.ry}deg)`;
-      }
-      frameRef.current = requestAnimationFrame(animate);
-    };
-    frameRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(frameRef.current);
+    if (ref.current) {
+      ref.current.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg)`;
+    }
   }, []);
 
   return { ref, handleMouseMove, handleMouseLeave };
@@ -68,7 +55,7 @@ const TERMINAL_LINES = [
     type: 'property', indent: 2,
     segments: [
       { text: 'role', type: 'key' }, { text: ': ', type: 'plain' },
-      { text: '"CSE Undergraduate"', type: 'val' }, { text: ',', type: 'plain' }
+      { text: '"Final year CSE Undergraduate"', type: 'val' }, { text: ',', type: 'plain' }
     ]
   },
   {
@@ -82,7 +69,7 @@ const TERMINAL_LINES = [
     type: 'property', indent: 2,
     segments: [
       { text: 'status', type: 'key' }, { text: ': ', type: 'plain' },
-      { text: '"actively seeking SDE roles"', type: 'val' }
+      { text: '"actively seeking Full-Stack Developer roles"', type: 'val' }
     ]
   },
   {
@@ -282,7 +269,7 @@ export default function Hero({ onSectionChange }) {
           >
             <motion.div className={styles.hero__eyebrow} variants={fade}>
               <span className={styles.dot} />
-              seeking SDE &amp; pre-final year roles
+              seeking Full-Stack Developer roles
             </motion.div>
 
             <motion.h1 className={styles.hero__headline} variants={fade}>
@@ -310,7 +297,7 @@ export default function Hero({ onSectionChange }) {
             </motion.div>
 
             <motion.div className={styles.hero__socials} variants={fade}>
-              <a href="https://github.com/lavtiwari-dev" target="_blank" rel="noopener noreferrer" aria-label="Lav Kumar on GitHub" className={styles.github}><FiGithub /></a>
+              <a href="https://github.com/lavtiwaridev" target="_blank" rel="noopener noreferrer" aria-label="Lav Kumar on GitHub" className={styles.github}><FiGithub /></a>
               <a href="https://www.linkedin.com/in/lavtiwaridev/" target="_blank" rel="noopener noreferrer" aria-label="Lav Kumar on LinkedIn" className={styles.linkedin}><FiLinkedin /></a>
               <a href="mailto:lavtiwari.dev@gmail.com" aria-label="Email" className={styles.mail}><FiMail /></a>
             </motion.div>

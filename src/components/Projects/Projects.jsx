@@ -6,14 +6,34 @@ import styles from './Projects.module.scss';
 
 const projects = [
   {
+    name: 'Gen AI Inventory Assistant',
+    file: 'ai-inventory/App.jsx',
+    desc: 'AI-powered inventory assistant with natural-language queries and multi-provider support.',
+    status: 'live',
+    flagship: true,
+    stack: ['React', 'Node.js', 'MongoDB', 'Google Gemini API'],
+    demo: 'https://genai-inventry-assistant.vercel.app/',
+    repo: 'https://github.com/lavtiwaridev/genai-inventry-assistant',
+    image: '/images/proj-ai-assistant.webp',
+    color: 'var(--white)',
+    longDesc: 'Gen AI Inventory Assistant is a modern inventory management application integrating the Google Gemini API. It features a natural-language query interface for generating inventory insights, structured data modules for products, suppliers, and orders, and role-based access control for secure administration.',
+    metric: 'AI-powered natural language queries',
+    features: [
+      'Built an AI inventory assistant with 4 modules—Products, Inventory, Suppliers, and Orders.',
+      'Integrated Google Gemini API for natural-language queries and inventory insights.',
+      'Implemented 3 roles—Admin, Manager, and Staff—for role-based access.',
+      'Designed AI provider support for Offline, Gemini, and SAP modes with minimal changes.'
+    ]
+  },
+  {
     name: 'MovieLens',
     file: 'movie-lens/App.jsx',
     desc: 'A modern movie exploration platform powered by the OMDb API for searching, cataloging, and rating films.',
     status: 'live',
     stack: ['React', 'Vite', 'OMDb API', 'CSS/SCSS', 'Framer Motion'],
     demo: 'https://movie-lens-kappa.vercel.app/',
-    repo: 'https://github.com/lavtiwari-dev/movie_lens',
-    image: '/images/proj-movielens.png',
+    repo: 'https://github.com/lavtiwaridev/movie_lens',
+    image: '/images/proj-movielens.webp',
     color: 'var(--mauve)',
     longDesc: 'MovieLens is a premium movie discovery and rating web application integrating the OMDb API. It features detailed metadata cards, search autocompletion, popular tags filtering, and interactive watchlist controls with modern aesthetics.',
     metric: 'Live deployment · OMDb API integrations',
@@ -33,7 +53,7 @@ const projects = [
     stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
     demo: '#',
     repo: '#',
-    image: '/images/proj-wastechain.png',
+    image: '/images/proj-wastechain.webp',
     color: 'var(--green)',
     longDesc: 'WasteChain is an innovative industrial reuse platform created to facilitate structured recycling and waste redistribution between different business entities. It allows organizations to list surplus production materials and negotiate exchanges, lowering operational overhead and building environment-friendly supply chains.',
     metric: 'Full-stack prototype · role-based exchange workflow',
@@ -72,7 +92,7 @@ const projects = [
     stack: ['React.js', 'Node.js', 'Firebase'],
     demo: '#',
     repo: '#',
-    image: '/images/proj-hiring-search.png',
+    image: '/images/proj-hiring-search.webp',
     color: 'var(--blue)',
     longDesc: 'Hiring Search Tool is a boolean-based lookup system customized for recruitment mapping. It queries datasets instantly to search for managers matching target skills, processes candidate attributes, and caches frequently accessed search indexes.',
     metric: 'Boolean search · Firebase-backed data retrieval',
@@ -81,64 +101,6 @@ const projects = [
       'Integrated Firebase real-time database for efficient data storage and retrieval.',
       'Improved UI responsiveness using React Hooks and optimized state management.',
       'Implemented clean query parsers that filter and evaluate search keywords instantly.'
-    ]
-  },
-  {
-    name: 'TaskSync Workspace',
-    file: 'task-sync/index.ts',
-    desc: 'Real-time task board for agile teams featuring drag-and-drop workflow automation.',
-    status: 'progress',
-    flagship: true,
-    stack: ['React', 'TypeScript', 'Node.js', 'Firebase', 'Framer Motion'],
-    demo: '#',
-    repo: '#',
-    image: '/images/proj-tasksync.png',
-    color: 'var(--yellow)',
-    longDesc: 'TaskSync workspace is a productivity platform with instant board synchronisation. It is built to optimize agile workflows by enabling smooth drag-and-drop board cards, real-time board sync, and micro-animations to improve team collaboration and engagement.',
-    metric: 'In development · real-time collaboration prototype',
-    caseStudy: {
-      problem: 'Agile teams using spreadsheets or heavyweight tools like Jira face friction with real-time collaboration — changes don\'t sync instantly and drag-and-drop feels sluggish on touch devices.',
-      approach: 'Built a lightweight Kanban board with Firebase Realtime Database for sub-100ms sync. Used React\'s useReducer for predictable state transitions and Framer Motion for gesture-driven drag-and-drop.',
-      tradeoffs: 'Chose Firebase over a custom WebSocket server to accelerate development — tradeoff is vendor lock-in. TypeScript strict mode added 20% more development time upfront but eliminated an entire class of runtime bugs.',
-      improvements: 'Would implement offline-first with IndexedDB + conflict resolution, add AI-powered task prioritization, and extract the drag-and-drop into a reusable open-source library.',
-      architecture: `  Browser A          Browser B
-    │                    │
-    ▼                    ▼
-  ┌──────────────────────────────┐
-  │  React + TypeScript Frontend │
-  │  useReducer · Framer Motion  │
-  └──────────────┬───────────────┘
-                 │
-                 ▼
-  ┌──────────────────────────────┐
-  │  Firebase Realtime Database  │
-  │  Live board sync · Auth      │
-  └──────────────────────────────┘`,
-    },
-    features: [
-      'Built board synchronization enabling multiple users to collaborate live.',
-      'Implemented drag and drop handlers optimized for desktop and touch screen gestures.',
-      'Designed status transition springs to trigger key action micro-animations.',
-      'Constructed state reducers handling undo/redo user interface tasks.'
-    ]
-  },
-  {
-    name: 'DevNotes API',
-    file: 'devnotes-api/server.go',
-    desc: 'Blazing fast markdown note-taking API backend with built-in search and syntax analysis.',
-    status: 'archived',
-    stack: ['Go', 'Gin', 'PostgreSQL'],
-    demo: '#',
-    repo: '#',
-    image: '/images/proj-devnotes.png',
-    color: 'var(--pink)',
-    longDesc: 'DevNotes is a high-performance RESTful API backend structured in Go. It handles indexing markdown articles, parsing internal links, and exposing fast search and lookup endpoints.',
-    metric: 'Archived backend concept · full-text search design',
-    features: [
-      'Engineered RESTful endpoints handling binary index notes.',
-      'Integrated PostgreSQL indexing for blazingly fast full-text match queries.',
-      'Optimized network overhead using compact JSON payloads.',
-      'Written custom middleware logs managing API request latency metrics.'
     ]
   }
 ];
@@ -354,19 +316,27 @@ export default function Projects() {
       </div>
 
       {/* Details Popup Modal */}
-      {activeProject && (
-        <div
-          className={styles.projects__popup}
-          onClick={() => setActiveProject(null)}
-          role="presentation"
-        >
-          <div
-            className={styles['projects__popup-content']}
-            onClick={(e) => e.stopPropagation()}
-            role="dialog"
-            aria-modal="true"
-            aria-label={`${activeProject.name} details`}
+      <AnimatePresence>
+        {activeProject && (
+          <motion.div
+            className={styles.projects__popup}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveProject(null)}
+            role="presentation"
           >
+            <motion.div
+              className={styles['projects__popup-content']}
+              initial={{ scale: 0.94, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.94, opacity: 0, y: 20 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              onClick={(e) => e.stopPropagation()}
+              role="dialog"
+              aria-modal="true"
+              aria-label={`${activeProject.name} details`}
+            >
             {/* Header bar */}
             <div className={styles['projects__popup-header']}>
               <span className={styles.projects__filename}>
@@ -477,9 +447,10 @@ export default function Projects() {
                 <span className={styles.projects__popup_unavailable}>Links will be added soon.</span>
               )}
             </div>
-          </div>
-        </div>
-      )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

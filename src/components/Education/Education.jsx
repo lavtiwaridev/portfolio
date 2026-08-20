@@ -10,17 +10,19 @@ const education = [
     gpa: 'CGPA: 7.7',
   },
   {
-  degree: 'Senior Secondary Education (Class XII)',
-  institution: 'Gandak High School, Siwan',
-  board: 'Bihar School Examination Board (BSEB)',
-  years: '2023',
-},
-{
-  degree: 'Secondary Education (Class X)',
-  institution: 'Gandak High School, Siwan',
-  board: 'Bihar School Examination Board (BSEB)',
-  years: '2021',
-},
+    degree: 'Senior Secondary Education (Class XII)',
+    institution: 'Gandak Uchh Vidyalaya, Tarwara, Siwan',
+    board: 'Bihar School Examination Board (BSEB)',
+    years: '2023',
+    gpa: 'Score: 66.4%',
+  },
+  {
+    degree: 'Secondary Education (Class X)',
+    institution: 'Gandak High School, Tarwara, Siwan',
+    board: 'Bihar School Examination Board (BSEB)',
+    years: '2021',
+    gpa: 'Score: 69.4%',
+  },
 ];
 
 const fade = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } };

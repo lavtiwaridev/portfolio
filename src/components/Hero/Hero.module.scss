@@ -21,7 +21,7 @@
     will-change: transform;
     cursor: default;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
-    transition: filter 0.3s ease;
+    transition: transform 0.15s ease-out, filter 0.3s ease;
 
     &:hover {
       filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.2));

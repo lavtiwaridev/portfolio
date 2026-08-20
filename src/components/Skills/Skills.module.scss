@@ -19,6 +19,7 @@
   }
 
   --skills-header-bg: var(--panel-alt);
+
   :global([data-theme='light']) & {
     --skills-header-bg: #f8fafc;
   }
@@ -42,7 +43,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 20px;
+    padding: 16px 22px;
     background: var(--skills-header-bg);
     border-bottom: 1px solid var(--border);
 
@@ -90,8 +91,8 @@
   &__pills {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px;
+    gap: 11px;
+    padding: 22px;
 
     @media (max-width: 600px) {
       padding: 12px 10px;
@@ -102,13 +103,13 @@
   &__pill {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    border-radius: 6px;
+    gap: 9px;
+    padding: 7px 13px;
+    border-radius: 7px;
     border: 1px solid color-mix(in srgb, var(--skill-color) 20%, var(--border));
     background: color-mix(in srgb, var(--skill-color) 6%, var(--panel));
     font-family: $sans;
-    font-size: 13px;
+    font-size: 13.5px;
     color: var(--text);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: default;
@@ -122,7 +123,7 @@
     &_icon {
       display: flex;
       align-items: center;
-      font-size: 16px;
+      font-size: 17px;
       color: var(--skill-color);
       transition: transform 0.25s ease;
 

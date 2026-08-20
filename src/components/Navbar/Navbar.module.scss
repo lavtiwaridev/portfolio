@@ -2,7 +2,9 @@
 
 .navbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
@@ -104,6 +106,7 @@
       opacity: 0.75;
       flex-shrink: 0;
     }
+
     &_label {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -135,7 +138,9 @@
 
   &__active_indicator {
     position: absolute;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 2px;
     background: var(--accent);
     z-index: 2;
@@ -197,7 +202,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px; height: 30px;
+    width: 30px;
+    height: 30px;
     border-radius: 6px;
     border: 1px solid var(--border);
     background: transparent;
@@ -245,7 +251,8 @@
     display: none;
     align-items: center;
     justify-content: center;
-    width: 30px; height: 30px;
+    width: 30px;
+    height: 30px;
     border-radius: 6px;
     border: 1px solid var(--border);
     background: transparent;
@@ -255,7 +262,9 @@
     transition: all var(--transition);
     pointer-events: auto;
 
-    &:hover { background: var(--panel); }
+    &:hover {
+      background: var(--panel);
+    }
 
     @media (max-width: 760px) {
       display: flex;
@@ -273,7 +282,8 @@
   &__mobile_menu {
     position: fixed;
     top: var(--tab-h);
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     background: var(--bg-alt);
     border-bottom: 1px solid var(--border);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
@@ -284,7 +294,9 @@
   &__backdrop {
     position: fixed;
     top: var(--tab-h);
-    left: 0; right: 0; bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(4px);
     z-index: 998;
@@ -313,13 +325,28 @@
       opacity: 0.95;
     }
 
-    &:hover { color: var(--text); opacity: 1; background: var(--panel-alt); }
-    &--active { color: var(--accent); opacity: 1; border-left-color: var(--accent); background: var(--panel-alt); }
+    &:hover {
+      color: var(--text);
+      opacity: 1;
+      background: var(--panel-alt);
+    }
+
+    &--active {
+      color: var(--accent);
+      opacity: 1;
+      border-left-color: var(--accent);
+      background: var(--panel-alt);
+    }
   }
 }
 
 // ── Responsive ─────────────────────────────────────────────────────────────
 @media (max-width: 760px) {
-  .navbar__tabs      { display: none; }
-  .navbar__hamburger { display: flex; }
+  .navbar__tabs {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
 }

@@ -13,7 +13,7 @@ import ResumeModal from '../ResumeModal/ResumeModal';
 import AnimatedCounter from '../AnimatedCounter/AnimatedCounter';
 import styles from './About.module.scss';
 
-const GITHUB_USER = 'lavtiwari-dev';
+const GITHUB_USER = 'lavtiwaridev';
 
 const stats = [
   { value: '300+', label: 'DSA problems', note: 'solved across coding platforms' },
@@ -25,8 +25,8 @@ const stats = [
 const dsaStats = [
   { label: 'Total Solved', value: '300+', color: 'var(--blue)' },
   { label: 'Easy', value: '120+', color: 'var(--green)' },
-  { label: 'Medium', value: '140+', color: 'var(--yellow)' },
-  { label: 'Hard', value: '40+', color: 'var(--pink)' },
+  { label: 'Medium', value: '140+', color: 'var(--blue)' },
+  { label: 'Hard', value: '40+', color: 'var(--green)' },
 ];
 
 const fade = (delay = 0) => ({
@@ -51,12 +51,12 @@ export default function About({ theme = 'dark' }) {
   const isDark = theme === 'dark';
   
   const streakUrl = isDark
-    ? `https://github-readme-streak-stats.herokuapp.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=transparent&ring=89b4fa&fire=fab387&currStreakNum=e2e8f0&sideNums=e2e8f0&currStreakLabel=94a3b8&sideLabels=94a3b8&dates=94a3b8&background=00000000`
-    : `https://github-readme-streak-stats.herokuapp.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=transparent&ring=1e40af&fire=c2410c&currStreakNum=020617&sideNums=020617&currStreakLabel=334155&sideLabels=334155&dates=475569&background=00000000`;
+    ? `https://github-readme-streak-stats.herokuapp.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=transparent&ring=6366F1&fire=22D3EE&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=94a3b8&sideLabels=94a3b8&dates=94a3b8&background=00000000`
+    : `https://github-readme-streak-stats.herokuapp.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=transparent&ring=4338CA&fire=0E7490&currStreakNum=020617&sideNums=020617&currStreakLabel=334155&sideLabels=334155&dates=475569&background=00000000`;
 
   const topLangsUrl = isDark
-    ? `https://github-readme-stats.vercel.app/api/top-langs?username=${GITHUB_USER}&layout=compact&theme=transparent&hide_border=true&title_color=89b4fa&text_color=e2e8f0&icon_color=89b4fa&bg_color=00000000&langs_count=6`
-    : `https://github-readme-stats.vercel.app/api/top-langs?username=${GITHUB_USER}&layout=compact&theme=transparent&hide_border=true&title_color=1e40af&text_color=020617&icon_color=1e40af&bg_color=00000000&langs_count=6`;
+    ? `https://github-readme-stats.vercel.app/api/top-langs?username=${GITHUB_USER}&layout=compact&theme=transparent&hide_border=true&title_color=6366F1&text_color=F8FAFC&icon_color=22D3EE&bg_color=00000000&langs_count=6`
+    : `https://github-readme-stats.vercel.app/api/top-langs?username=${GITHUB_USER}&layout=compact&theme=transparent&hide_border=true&title_color=4338CA&text_color=020617&icon_color=0E7490&bg_color=00000000&langs_count=6`;
 
   return (
     <>
@@ -81,7 +81,7 @@ export default function About({ theme = 'dark' }) {
 
               <div className={styles.about__copy}>
                 <p>
-                  I'm a pre-final-year CSE student focused on React, Node.js, and Java.
+                  I'm a final-year CSE student focused on React, Node.js, and Java.
                   I write clean code for full-stack applications and enjoy engineering reliable backend APIs.
                   Beyond coding, I actively solve algorithmic challenges to strengthen my problem-solving skills.
                   I am always excited to learn new technology stacks and build projects that make an impact.
@@ -119,7 +119,7 @@ export default function About({ theme = 'dark' }) {
 
                 {/* Image frame */}
                 <div className={styles.about__portrait_frame}>
-                  <img src="/images/profile.jpg" alt="Lav Kumar" loading="lazy" decoding="async" />
+                  <img src="/images/profile.webp" alt="Lav Kumar" loading="lazy" decoding="async" />
                   <div className={styles.about__portrait_glow} aria-hidden="true" />
 
                   <figcaption className={styles.about__identity}>

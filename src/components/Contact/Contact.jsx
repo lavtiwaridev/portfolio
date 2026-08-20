@@ -133,7 +133,7 @@ export default function Contact() {
             {/* Social Links */}
             <div className={styles.contact__socials}>
               <a
-                href="https://github.com/lavtiwari-dev"
+                href="https://github.com/lavtiwaridev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.contact__social_link}

@@ -148,7 +148,7 @@
     box-shadow: 0 0 10px var(--accent);
 
     .education__dot_inner {
-      background: var(--green);
+      background: var(--accent);
       transform: scale(1.2);
     }
   }
@@ -362,7 +362,7 @@
       animation: pulseTimelineDot 2s infinite;
 
       .education__dot_inner {
-        background: var(--green);
+        background: var(--accent);
         transform: scale(1.2);
       }
     }
@@ -392,6 +392,7 @@
 }
 
 @keyframes activeCardPulse {
+
   0%,
   100% {
     box-shadow: var(--panel-shadow-hover), 0 0 0 1px var(--accent);
@@ -399,7 +400,7 @@
   }
 
   50% {
-    box-shadow: var(--panel-shadow-hover), 0 0 0 2px var(--green);
-    border-color: var(--green);
+    box-shadow: var(--panel-shadow-hover), 0 0 0 2px var(--accent);
+    border-color: var(--accent);
   }
 }

@@ -129,14 +129,6 @@ export default function App() {
 
   return (
     <>
-      {/* Animated Aurora Drift Backdrop */}
-      <div className="aurora-container" aria-hidden="true">
-        <div className="aurora-blob aurora-blob--1" />
-        <div className="aurora-blob aurora-blob--2" />
-        <div className="aurora-blob aurora-blob--3" />
-        <div className="aurora-blob aurora-blob--4" />
-      </div>
-      <div className="aurora-glass" aria-hidden="true" />
 
       {!loaded && <Loader onComplete={() => setLoaded(true)} />}
 
