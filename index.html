@@ -9,6 +9,11 @@
         var saved = localStorage.getItem('theme');
         var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
         document.documentElement.setAttribute('data-theme', theme);
+        
+        var metaThemeColor = document.createElement('meta');
+        metaThemeColor.name = 'theme-color';
+        metaThemeColor.content = theme === 'light' ? '#f1f5f9' : '#0f1015';
+        document.head.appendChild(metaThemeColor);
       })();
     </script>
 
