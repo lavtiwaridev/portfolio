@@ -38,9 +38,14 @@ export default function App() {
   const lockRef = useRef(false);
   const timeoutRef = useRef(null);
 
-  // Check for 404
+  // Check for 404 and remove preload class
   useEffect(() => {
     setNotFound(is404());
+    
+    // Prevent transition flicker on page load
+    setTimeout(() => {
+      document.body.classList.remove('preload');
+    }, 50);
   }, []);
 
   // Apply theme

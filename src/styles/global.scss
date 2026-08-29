@@ -10,6 +10,13 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+// Prevent transition flicker on page load
+.preload {
+  &, * {
+    transition: none !important;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--tab-h);
