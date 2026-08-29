@@ -125,14 +125,14 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
-    transition: all var(--transition);
+    transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
 
     &_inner {
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: var(--accent);
-      transition: all var(--transition);
+      transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
     }
 
     @media (max-width: 768px) {
@@ -165,7 +165,7 @@
       border: 1px solid color-mix(in srgb, var(--mauve) 20%, transparent);
       color: var(--mauve);
       white-space: nowrap;
-      transition: all var(--transition);
+      transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
     }
   }
 

@@ -146,7 +146,7 @@
   border-radius: 6px;
   padding: 8px 20px;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.25s;
 
   &:hover {
     background: color-mix(in srgb, var(--green) 14%, transparent);

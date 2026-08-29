@@ -20,11 +20,12 @@
     transform-style: preserve-3d;
     will-change: transform;
     cursor: default;
-    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
-    transition: transform 0.15s ease-out, filter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    transition: transform 0.15s ease-out, box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: var(--radius);
 
     &:hover {
-      filter: drop-shadow(0 16px 48px color-mix(in srgb, var(--accent) 35%, transparent));
+      box-shadow: 0 20px 48px color-mix(in srgb, var(--accent) 25%, transparent);
     }
 
     @media (max-width: 900px) {
@@ -195,7 +196,7 @@
       border-radius: 9px;
       border: 1px solid var(--border);
       font-size: 21px;
-      transition: all var(--transition);
+      transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
 
       &:hover {
         transform: translateY(-4px) scale(1.08);

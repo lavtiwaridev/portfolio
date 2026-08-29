@@ -216,6 +216,7 @@ export default function Projects() {
               key={p.name}
               className={styles.projects__card}
               variants={fade}
+              whileHover={{ y: -6 }}
               style={{ '--proj-color': p.color }}
             >
               <div

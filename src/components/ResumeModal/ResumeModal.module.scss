@@ -92,7 +92,7 @@
   padding: 4px 10px;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 
   &:hover {
     color: var(--accent);
@@ -119,7 +119,7 @@
   color: var(--term-muted);
   cursor: pointer;
   font-size: 15px;
-  transition: all 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 
   &:hover {
     color: var(--pink);

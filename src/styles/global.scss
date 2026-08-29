@@ -206,7 +206,7 @@ a:hover {
   background: var(--panel);
   color: var(--mauve);
   cursor: default;
-  transition: all var(--transition);
+  transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition), transform var(--transition);
   white-space: nowrap;
 
   &:hover {
@@ -236,7 +236,7 @@ a:hover {
   border-radius: var(--radius);
   border: 1px solid transparent;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition), transform var(--transition);
   text-decoration: none;
   position: relative;
   white-space: nowrap;

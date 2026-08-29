@@ -238,7 +238,12 @@ export default function Skills() {
           animate={inView ? 'show' : 'hidden'}
         >
           {groups.map(g => (
-            <motion.div key={g.label} className={styles.skills__group} variants={cardVariants}>
+            <motion.div 
+              key={g.label} 
+              className={styles.skills__group} 
+              variants={cardVariants}
+              whileHover={{ y: -4 }}
+            >
               <div className={styles['skills__group-header']}>
                 <span className={styles.icon}>{g.icon}</span>
                 <span className={styles.file}>{g.file}</span>
@@ -248,10 +253,9 @@ export default function Skills() {
               </div>
               <div className={styles.skills__pills}>
                 {g.skills.map(s => (
-                  <motion.span 
+                  <span 
                     key={s.name} 
                     className={styles.skills__pill}
-                    variants={pillVariants}
                     style={{
                       '--skill-color': s.color
                     }}
@@ -264,7 +268,7 @@ export default function Skills() {
                         <span className={styles.skills__pill_level}>{s.level}</span>
                       </>
                     )}
-                  </motion.span>
+                  </span>
                 ))}
               </div>
             </motion.div>
