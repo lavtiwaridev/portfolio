@@ -1,8 +1,8 @@
 @use '../../styles/variables' as *;
 
 // Fixed dark terminal theme colors for light mode resilience
-$term-bg:      #1e1e2e;
-$term-bg-alt:  #181825;
+$term-bg:      #000000;
+$term-bg-alt:  #000000;
 $term-border:  #313244;
 $term-text:    #cdd6f4;
 $term-muted:   #7f849c;

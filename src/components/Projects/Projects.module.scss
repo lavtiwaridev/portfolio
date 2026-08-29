@@ -42,10 +42,14 @@
 
   &__card {
     position: relative;
-    background: color-mix(in srgb, var(--proj-color, var(--accent)) 3%, var(--panel));
+    background: #000000;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
+
+    :global([data-theme='light']) & {
+      background: #ffffff;
+    }
     display: flex;
     flex-direction: column;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);

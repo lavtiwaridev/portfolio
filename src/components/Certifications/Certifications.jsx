@@ -8,7 +8,6 @@ const certs = [
   {
     name: 'SAP Generative AI Developer Certification',
     issuer: 'SAP',
-    year: '2024',
     link: 'https://www.credly.com/badges/50f0c7c4-4821-4f65-8670-dfcc4a2aa49d',
     image: '/images/cert-sap.webp',
     monogram: 'SAP',
@@ -19,7 +18,6 @@ const certs = [
   {
     name: 'GitHub Foundations Certification (GH-900)',
     issuer: 'GitHub',
-    year: '2026',
     link: 'https://learn.microsoft.com/en-gb/users/lavkumar-official/credentials/certification/github-foundations?tab=credentials-tab',
     image: '/images/cert-github-foundations.webp',
     monogram: 'GH',
@@ -30,7 +28,6 @@ const certs = [
   {
     name: 'Microsoft Azure Fundamentals (AZ-900)',
     issuer: 'Microsoft',
-    year: '2026',
     link: 'https://www.credly.com/badges/1ded4fce-c205-4daf-8c3b-1b5b604fa6e6',
     image: '/images/cert-azure.webp',
     monogram: 'AZ',
@@ -41,7 +38,6 @@ const certs = [
   {
     name: 'MongoDB Skill: Relational to Document Model',
     issuer: 'MongoDB',
-    year: '2026',
     link: 'https://www.credly.com/badges/ef06b4a6-049b-40c4-a868-5e8021eba2b3',
     image: '/images/cert-mongodb.webp',
     monogram: 'MDB',
@@ -52,7 +48,6 @@ const certs = [
   {
     name: 'NPTEL Elite Certification in Cloud Computing',
     issuer: 'IIT/NPTEL',
-    year: '2023',
     link: '#',
     image: '/images/cert-nptel.webp',
     monogram: 'IIT',
@@ -158,7 +153,6 @@ export default function Certifications() {
                 >
                   {c.monogram}
                 </div>
-                <span className={styles.certs__year}>{c.year}</span>
               </div>
 
               {/* Body */}

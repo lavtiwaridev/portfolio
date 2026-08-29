@@ -337,116 +337,116 @@ export default function Projects() {
               aria-modal="true"
               aria-label={`${activeProject.name} details`}
             >
-            {/* Header bar */}
-            <div className={styles['projects__popup-header']}>
-              <span className={styles.projects__filename}>
-                <FiFile /> {activeProject.file}
-              </span>
-              <button
-                ref={closeButtonRef}
-                type="button"
-                className={styles['projects__popup-close']}
-                onClick={() => setActiveProject(null)}
-                aria-label="Close details"
-              >
-                <FiX />
-              </button>
-            </div>
-
-            {/* Scrollable details */}
-            <div className={styles['projects__popup-scroll']}>
-              <div className={styles['projects__popup-image']}>
-                <img src={activeProject.image} alt={activeProject.name} />
+              {/* Header bar */}
+              <div className={styles['projects__popup-header']}>
+                <span className={styles.projects__filename}>
+                  <FiFile /> {activeProject.file}
+                </span>
+                <button
+                  ref={closeButtonRef}
+                  type="button"
+                  className={styles['projects__popup-close']}
+                  onClick={() => setActiveProject(null)}
+                  aria-label="Close details"
+                >
+                  <FiX />
+                </button>
               </div>
 
-              <div className={styles['projects__popup-meta']}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                  <h3 className={styles['projects__popup-title']}>{activeProject.name}</h3>
-                  {activeProject.flagship && (
-                    <span className={styles['projects__badge--flagship']} style={{ fontSize: 11 }}>★ flagship</span>
+              {/* Scrollable details */}
+              <div className={styles['projects__popup-scroll']}>
+                <div className={styles['projects__popup-image']}>
+                  <img src={activeProject.image} alt={activeProject.name} />
+                </div>
+
+                <div className={styles['projects__popup-meta']}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                    <h3 className={styles['projects__popup-title']}>{activeProject.name}</h3>
+                    {activeProject.flagship && (
+                      <span className={styles['projects__badge--flagship']} style={{ fontSize: 11 }}>★ flagship</span>
+                    )}
+                  </div>
+                  <div className={styles.projects__stack} style={{ margin: '8px 0 12px' }}>
+                    {activeProject.stack.map(t => <span key={t} className="tag">{t}</span>)}
+                  </div>
+                  <p className={styles['projects__popup-longdesc']}>{activeProject.longDesc}</p>
+                  {activeProject.metric && (
+                    <div style={{ marginTop: 12 }}>
+                      <strong>Project outcome:</strong>
+                      <div style={{ marginTop: 6, color: 'var(--text)' }}>
+                        {activeProject.metric}
+                      </div>
+                    </div>
                   )}
                 </div>
-                <div className={styles.projects__stack} style={{ margin: '8px 0 12px' }}>
-                  {activeProject.stack.map(t => <span key={t} className="tag">{t}</span>)}
-                </div>
-                <p className={styles['projects__popup-longdesc']}>{activeProject.longDesc}</p>
-                {activeProject.metric && (
-                  <div style={{ marginTop: 12 }}>
-                    <strong>Project outcome:</strong>
-                    <div style={{ marginTop: 6, color: 'var(--text)' }}>
-                      {activeProject.metric}
+
+                {/* Flagship case-study deep-dive */}
+                {activeProject.caseStudy && (
+                  <div className={styles['projects__case-study']}>
+                    <h4 className={styles['projects__popup-section-title']}>Case Study Deep-Dive</h4>
+                    <div className={styles['projects__case-grid']}>
+                      <div className={styles['projects__case-block']}>
+                        <div className={styles['projects__case-label']}><span>// 01</span> Problem</div>
+                        <p>{activeProject.caseStudy.problem}</p>
+                      </div>
+                      <div className={styles['projects__case-block']}>
+                        <div className={styles['projects__case-label']}><span>// 02</span> Approach</div>
+                        <p>{activeProject.caseStudy.approach}</p>
+                      </div>
+                      <div className={styles['projects__case-block']}>
+                        <div className={styles['projects__case-label']}><span>// 03</span> Tradeoffs</div>
+                        <p>{activeProject.caseStudy.tradeoffs}</p>
+                      </div>
+                      <div className={styles['projects__case-block']}>
+                        <div className={styles['projects__case-label']}><span>// 04</span> What I'd improve</div>
+                        <p>{activeProject.caseStudy.improvements}</p>
+                      </div>
+                    </div>
+                    <div className={styles['projects__arch-diagram']}>
+                      <div className={styles['projects__arch-label']}>Architecture</div>
+                      <pre>{activeProject.caseStudy.architecture}</pre>
                     </div>
                   </div>
                 )}
-              </div>
 
-              {/* Flagship case-study deep-dive */}
-              {activeProject.caseStudy && (
-                <div className={styles['projects__case-study']}>
-                  <h4 className={styles['projects__popup-section-title']}>Case Study Deep-Dive</h4>
-                  <div className={styles['projects__case-grid']}>
-                    <div className={styles['projects__case-block']}>
-                      <div className={styles['projects__case-label']}><span>// 01</span> Problem</div>
-                      <p>{activeProject.caseStudy.problem}</p>
-                    </div>
-                    <div className={styles['projects__case-block']}>
-                      <div className={styles['projects__case-label']}><span>// 02</span> Approach</div>
-                      <p>{activeProject.caseStudy.approach}</p>
-                    </div>
-                    <div className={styles['projects__case-block']}>
-                      <div className={styles['projects__case-label']}><span>// 03</span> Tradeoffs</div>
-                      <p>{activeProject.caseStudy.tradeoffs}</p>
-                    </div>
-                    <div className={styles['projects__case-block']}>
-                      <div className={styles['projects__case-label']}><span>// 04</span> What I'd improve</div>
-                      <p>{activeProject.caseStudy.improvements}</p>
-                    </div>
-                  </div>
-                  <div className={styles['projects__arch-diagram']}>
-                    <div className={styles['projects__arch-label']}>Architecture</div>
-                    <pre>{activeProject.caseStudy.architecture}</pre>
-                  </div>
+                <div>
+                  <h4 className={styles['projects__popup-section-title']}>Technical Features</h4>
+                  <ul className={styles['projects__popup-features']}>
+                    {activeProject.features.map((feat, idx) => (
+                      <li key={idx}>{feat}</li>
+                    ))}
+                  </ul>
                 </div>
-              )}
-
-              <div>
-                <h4 className={styles['projects__popup-section-title']}>Technical Features</h4>
-                <ul className={styles['projects__popup-features']}>
-                  {activeProject.features.map((feat, idx) => (
-                    <li key={idx}>{feat}</li>
-                  ))}
-                </ul>
               </div>
-            </div>
 
-            {/* Action links */}
-            <div className={styles['projects__popup-footer']}>
-              {hasProjectLink(activeProject.repo) && (
-                <a
-                  href={activeProject.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn--outline"
-                  style={{ padding: '8px 16px' }}
-                >
-                  <FiGithub /> Source Code
-                </a>
-              )}
-              {hasProjectLink(activeProject.demo) && (
-                <a
-                  href={activeProject.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn--primary"
-                  style={{ padding: '8px 16px' }}
-                >
-                  <FiExternalLink /> Visit Project
-                </a>
-              )}
-              {!hasProjectLink(activeProject.repo) && !hasProjectLink(activeProject.demo) && (
-                <span className={styles.projects__popup_unavailable}>Links will be added soon.</span>
-              )}
-            </div>
+              {/* Action links */}
+              <div className={styles['projects__popup-footer']}>
+                {hasProjectLink(activeProject.repo) && (
+                  <a
+                    href={activeProject.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn--outline"
+                    style={{ padding: '8px 16px' }}
+                  >
+                    <FiGithub /> Source Code
+                  </a>
+                )}
+                {hasProjectLink(activeProject.demo) && (
+                  <a
+                    href={activeProject.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn--primary"
+                    style={{ padding: '8px 16px' }}
+                  >
+                    <FiExternalLink /> Visit Project
+                  </a>
+                )}
+                {!hasProjectLink(activeProject.repo) && !hasProjectLink(activeProject.demo) && (
+                  <span className={styles.projects__popup_unavailable}>Links will be added soon.</span>
+                )}
+              </div>
             </motion.div>
           </motion.div>
         )}

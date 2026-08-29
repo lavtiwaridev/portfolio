@@ -1,6 +1,6 @@
 // ─── Dark Theme (default) ───────────────────────────────────────────────────
 :root {
-  --bg: #0f1015;
+  --bg: #000000;
   --bg-alt: #0f1015;
   --panel: #181a24;
   --panel-alt: #202332;
@@ -43,7 +43,7 @@
   --max-w: 1380px;
   --tab-h: 44px;
   --gutter-w: 48px;
-  --transition: 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
   --grid-color: rgba(137, 180, 250, 0.08);
   --glow-color: rgba(137, 180, 250, 0.15);
@@ -55,13 +55,13 @@
 
 // ─── Light Theme ─────────────────────────────────────────────────────────────
 [data-theme='light'] {
-  --bg: #f1f5f9; // Soft slate-100 background to reduce glare (was #f8fafc)
+  --bg: #ffffff; // Pure white background
   --bg-alt: #e2e8f0; // Soft slate-200 background for section alternates (was #f1f5f9)
   --panel: #ffffff; // Panels stay pure white
   --panel-alt: #cbd5e1; // Soft panel alternates (was #e2e8f0)
   --border: #94a3b8; // Modern soft border (was #cbd5e1)
-  --text: #020617; // Slate-955 (was #1e293b - made it darker slate, almost black)
-  --muted: #334155; // Slate-700 text (was #475569 - made it darker)
+  --text: #000000; // Pure black
+  --muted: #444444; // Dark gray
   --portrait-grad: 241, 245, 249; // Match soft slate-100 background (was 248, 250, 252)
   --blue: #1e3a8a; // Darker slate blue for readable text (was #1d4ed8)
   --green: #14532d; // Darker forest green for readable text (was #15803d)

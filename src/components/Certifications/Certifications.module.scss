@@ -42,7 +42,12 @@
   &__card {
     container-type: inline-size;
     position: relative;
-    background: color-mix(in srgb, var(--cert-color, var(--accent)) 3%, var(--panel));
+    background: #000000;
+
+    :global([data-theme='light']) & {
+      background: #ffffff;
+    }
+
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 24px;
@@ -50,8 +55,11 @@
     flex-direction: column;
     gap: 20px;
     overflow: hidden;
-    box-shadow: var(--panel-shadow), 0 0 0 1px var(--cert-color, var(--accent));
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--panel-shadow),
+    0 0 0 1px var(--cert-color, var(--accent));
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
     // Glowing left accent bar (color injected inline)
     &::before {

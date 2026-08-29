@@ -17,8 +17,8 @@ const GITHUB_USER = 'lavtiwaridev';
 
 const stats = [
   { value: '300+', label: 'DSA problems', note: 'solved across coding platforms' },
-  { value: '4', label: 'Certifications', note: 'across cloud and development' },
-  { value: '5+', label: 'Projects', note: 'built from idea to interface' },
+  { value: '5+', label: 'Certifications', note: 'across cloud and development' },
+  { value: '10+', label: 'Projects', note: 'built from idea to interface' },
 ];
 
 // Static LeetCode-style card data (replace with real API if username is provided)
@@ -51,12 +51,12 @@ export default function About({ theme = 'dark' }) {
   const isDark = theme === 'dark';
   
   const streakUrl = isDark
-    ? `https://streak-stats.demolab.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=transparent&ring=6366F1&fire=22D3EE&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=94a3b8&sideLabels=94a3b8&dates=94a3b8&background=00000000`
-    : `https://streak-stats.demolab.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=transparent&ring=4338CA&fire=0E7490&currStreakNum=020617&sideNums=020617&currStreakLabel=334155&sideLabels=334155&dates=475569&background=00000000`;
+    ? `https://streak-stats.demolab.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=00000000&ring=6366F1&fire=22D3EE&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=94a3b8&sideLabels=94a3b8&dates=94a3b8&background=00000000`
+    : `https://streak-stats.demolab.com/?user=${GITHUB_USER}&theme=transparent&hide_border=true&stroke=00000000&ring=4338CA&fire=0E7490&currStreakNum=000000&sideNums=000000&currStreakLabel=000000&sideLabels=000000&dates=000000&background=00000000&v=2`;
 
   const topLangsUrl = isDark
     ? `https://github-readme-stats.vercel.app/api/top-langs?username=${GITHUB_USER}&layout=compact&theme=transparent&hide_border=true&title_color=6366F1&text_color=F8FAFC&icon_color=22D3EE&bg_color=00000000&langs_count=6`
-    : `https://github-readme-stats.vercel.app/api/top-langs?username=${GITHUB_USER}&layout=compact&theme=transparent&hide_border=true&title_color=4338CA&text_color=020617&icon_color=0E7490&bg_color=00000000&langs_count=6`;
+    : `https://github-readme-stats.vercel.app/api/top-langs?username=${GITHUB_USER}&layout=compact&theme=transparent&hide_border=true&title_color=000000&text_color=000000&icon_color=0E7490&bg_color=00000000&langs_count=6&v=2`;
 
   return (
     <>

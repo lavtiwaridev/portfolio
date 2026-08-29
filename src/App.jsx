@@ -66,7 +66,7 @@ export default function App() {
   useEffect(() => {
     const handleKeyDown = (e) => {
       // Cmd+K / Ctrl+K — open command palette
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
         setPaletteOpen(prev => !prev);
       }

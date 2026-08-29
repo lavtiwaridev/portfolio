@@ -7,7 +7,7 @@ import {
   SiJavascript, SiTailwindcss, SiExpress, SiMongodb, SiPostman,
   SiDocker, SiKubernetes
 } from 'react-icons/si';
-import { VscCode } from 'react-icons/vsc';
+import { VscCode, VscAzure } from 'react-icons/vsc';
 import { DiMysql } from 'react-icons/di';
 import { FiMonitor, FiServer, FiTool, FiDatabase, FiCpu } from 'react-icons/fi';
 import { TbBinaryTree, TbSettingsCog, TbDatabase, TbTerminal } from 'react-icons/tb';
@@ -182,10 +182,10 @@ const groups = [
         level: 'Learning'
       },
       {
-        name: 'AWS Cloud',
-        icon: <FaAws />,
-        color: '#FF9900',
-        level: 'Learning'
+        name: 'Microsoft Azure',
+        icon: <VscAzure />,
+        level: 'Familiar',
+        color: '#0078D4'
       },
       {
         name: 'Kubernetes',
