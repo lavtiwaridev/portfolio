@@ -48,7 +48,7 @@ const certs = [
   {
     name: 'NPTEL Elite Certification in Cloud Computing',
     issuer: 'IIT/NPTEL',
-    link: '#',
+    link: 'https://nptel.ac.in/noc/E_Certificate/NPTEL25CS107S35320036110608644',
     image: '/images/cert-nptel.webp',
     monogram: 'IIT',
     color: '#F39C12',
