@@ -18,7 +18,7 @@ const certs = [
   {
     name: 'GitHub Foundations Certification (GH-900)',
     issuer: 'GitHub',
-    link: 'https://learn.microsoft.com/en-gb/users/lavkumar-official/credentials/certification/github-foundations?tab=credentials-tab',
+    link: 'https://learn.microsoft.com/en-gb/users/lavkumar-official/credentials/1d3c49b25e92ca0e?ref=https%3A%2F%2Fwww.credly.com%2F',
     image: '/images/cert-github-foundations.webp',
     monogram: 'GH',
     color: 'var(--github-color)',
